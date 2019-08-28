@@ -1,0 +1,36 @@
+div.brief {
+	text-align: center; 
+	background-color: var(--background); 
+	padding: 1em; 
+	border-radius: 6px;
+}
+
+div.brief > div.cnt {
+	font-size: 5em; 
+	font-weight: bold;
+}
+
+
+.card {
+	color: var(--text) !important;
+}
+
+.card:hover {
+	color: var(--text) !important;
+	text-decoration: none !important;
+}
+
+
+.card > div {
+	padding: 0.5em; 
+	margin-top: 0.5em;
+	background-color: var(--background-alt);
+	min-height: 4em;
+	border-radius: 4px;
+}
+
+.card > div > img {
+	float: left; 
+	padding-right: 0.5em; 
+	height: 4em;
+}

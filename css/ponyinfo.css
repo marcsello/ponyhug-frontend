@@ -1,0 +1,15 @@
+div.ponycard {
+	text-align: center;
+	padding: 1em; 
+	background-color: var(--background); 
+	border-radius: 6px;
+}
+
+div.ponycard > div.src {
+	text-align: right;
+}
+
+div.ponycard > div.title {
+	font-size: 1.2em;
+	font-weight: bold;
+}
