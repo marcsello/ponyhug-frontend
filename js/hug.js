@@ -28,13 +28,10 @@ $( document ).ready(function () {
                     $('#hug_form').prop("disabled", false);
 			    },
                 201 : function(data) { // successful hug!
-                    $(location).attr("href", "ponyinfo.html?ponyid=1&justhugged"); // redirect user to the hugged pony
+                    $(location).attr("href", "ponyinfo.html?ponyid=" + data.pony.id + "&justhugged"); // redirect user to the hugged pony
 			    }
 		    }
 	    });
-
-
-
 
     }
 

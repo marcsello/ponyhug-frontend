@@ -9,21 +9,21 @@
 <link rel="stylesheet" href="css/ponyinfo.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
 <script src="js/config.js"></script>
 <script src="js/common.js"></script>
 <script>
 	checkRegistration(false);
 </script>
 
-</head>
-<body>
 
-<h1>Pony info</h1>
 
+
+<script id="content_template" type="text/x-handlebars-template">
 <div class="ponycard">
-	<img src="https://derpicdn.net/img/view/2012/8/27/84264.gif" />
-	<div class="src"><a href="https://derpibooru.org/84264">source</a></div>
-	<div class="title">The derpest derp horse derped the derps ever derping</div>
+	<img src="{{ image }}" />
+	<div class="src"><a href="{{ source }}">source</a></div>
+	<div class="title">{{ title }}</div>
 </div>
 
 
@@ -31,18 +31,25 @@
 
 <table>
 <tbody>
-<tr><th>First hugger</th><td>Marcsello</td></tr>
-<tr><th>Total hugs: </th><td>2</td></tr>
-<tr><th>Hugged by: </th><td>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br></td></tr>
+<tr><th>First hugger</th><td>{{ first_hugger }}</td></tr>
+<tr><th>Total hugs</th><td>2</td></tr>
+<tr><th>Hugged by</th><td>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br></td></tr>
 </tbody>
 </table>
+</script>
 
+</head>
+<body>
+
+<h1>Pony info</h1>
+
+<div id="content_container">
+</div>
 
 <div class="navigators">
 	<button onclick="window.location.href='herd.html'">Your stats</button>
 	<button onclick="window.location.href='hug.html'">Hug another pony!</button>
 </div>
-
 
 
 <div class="footer">
@@ -61,5 +68,6 @@
 </div>
 
 
+<script src="js/ponyinfo.js"></script>
 </body>
 </html>
