@@ -7,27 +7,30 @@
 <link rel="stylesheet" href="css/watercss_light.min.css">
 <link rel="stylesheet" href="css/common.css">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/config.js"></script>
 
 </head>
 <body>
 <h1>Register</h1>
 
-<div>
+<div class="padded">
 Caution your memes are being memed. Be careful while meming. 
 Always be aware of your surroundings
 </div>
 
+<div id="errortext">Warning a nigga stole your bike!</div>
+
 <div class="form_container">
-<form action="#">
-	<input type="text" placeholder="Player name"></input>
+<form action="#" id="register_form">
+	<input name="playername" type="text" placeholder="Player name"></input>
 	<div style="text-align:right">
 		<button>Start playing!</button>
 	</div>
 </form>
 </div>
 
-<div>
+<div class="padded">
 Lorem  laoreet. Donec eget ultrices massa, vitae scelerisque dolor. In interdum mi massa, ut maximus nunc convallis sed. Donec  tristique mollis at ac urna. Nullam aliquam velit massa.
 </div>
 
@@ -46,6 +49,6 @@ Lorem  laoreet. Donec eget ultrices massa, vitae scelerisque dolor. In interdum 
 	</div>
 </div>
 
-
+<script src="js/register.js"></script>
 </body>
 </html>
