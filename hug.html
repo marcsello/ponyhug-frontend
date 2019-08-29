@@ -9,6 +9,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script>
+	checkRegistration(false);
+</script>
 
 </head>
 <body>
@@ -18,9 +22,12 @@
 Please enter the code bellow thank you very muchos gracias:
 </div>
 
+
+<div id="errortext">&nbsp;</div>
+
 <div class="form_container">
-<form action="#">
-	<input type="text" placeholder="Key: XXXXXXXXXX"></input>
+<form action="#" id="hug_form" autocomplete="off">
+	<input type="text" name="ponykey" autocomplete="off" placeholder="Key: XXXXXXXXXX"></input>
 	<div style="text-align:right">
 		<button>Hug!</button>
 	</div>
@@ -39,17 +46,17 @@ You can also scan QR code pls, k thx bai
 	<div>
 	Get <a href="#">HELP</a>!
 	</div>
-	
+
 	<div>
 	Created by Marcsello 2019
 	</div>
-	
+
 	<div>
 	<a href="https://hunbrony.hu">Hunbrony.hu</a>&nbsp;
 	<a href="https://marcsello.com">Marcsello.com</a>
 	</div>
 </div>
 
-
+<script src="js/hug.js"></script>
 </body>
 </html>

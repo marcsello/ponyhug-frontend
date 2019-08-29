@@ -9,6 +9,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script>
+	checkRegistration(true);
+</script>
 
 </head>
 <body>
@@ -19,11 +23,11 @@ Caution your memes are being memed. Be careful while meming.
 Always be aware of your surroundings
 </div>
 
-<div id="errortext">Warning a nigga stole your bike!</div>
+<div id="errortext">&nbsp;</div>
 
 <div class="form_container">
-<form action="#" id="register_form">
-	<input name="playername" type="text" placeholder="Player name"></input>
+<form action="#" id="register_form" autocomplete="off">
+	<input name="playername" type="text" placeholder="Player name" autocomplete="off"></input>
 	<div style="text-align:right">
 		<button>Start playing!</button>
 	</div>

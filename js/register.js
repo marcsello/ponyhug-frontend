@@ -1,29 +1,50 @@
+$( document ).ready(function () {
 
-$('#register_form').submit(function (event)  {
-	event.preventDefault()
-	
-	
-
-	var register_form_data = $('#register_form').serializeArray().reduce(function(obj, item) {
-							obj[item.name] = item.value;
-							return obj;
-						}, {});
-	
-	
-	$.ajax({
-		type: "POST",
-		url: API_URL + "/register",
-		data: JSON.stringify(register_form_data),
-		contentType: "application/json; charset=utf-8",
-		dataType: "json",
-		success: function(data){
-			alert(data.jwt);
-		},
-		failure: function(errMsg) {
-			alert(errMsg);
-		}
+	$("#register_form input").on("input",function() {
+			$("#errortext").html("&nbsp;");
 	});
 
 
-	return false;
+	$('#register_form').submit(function(event)  {
+		event.preventDefault()
+
+
+
+        var register_form_data = getFormData("#register_form");
+
+		var playername = register_form_data.playername;
+
+
+		$('#register_form').prop("disabled", true);
+
+		$.ajax({
+			type: "POST",
+			url: API_URL + "/register",
+			data: JSON.stringify(register_form_data),
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			statusCode: {
+				403 : function() {
+					$("#errortext").html("Name already taken");
+					$('#register_form').prop("disabled", false);
+				},
+				201 : function(data) {
+					if (data.jwt) {
+						localStorage.setItem("ponyhug_jwt",data.jwt);
+						localStorage.setItem("ponyhug_name",playername);
+						$(location).attr("href", "herd.html"); // redirect user to herd.html
+
+					} else {
+						$("#errortext").html("Could not get JWT token");
+						$('#register_form').prop("disabled", false);
+					}
+				}
+			}
+		});
+
+
+		return false;
+	});
+
+
 });
