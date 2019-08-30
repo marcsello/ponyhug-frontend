@@ -40,7 +40,3 @@ function getFormData(jquery_selector) {
 							}, {});
 
 }
-
-Handlebars.registerHelper('count', function (arr) {
-    return arr.length;
-})

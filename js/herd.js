@@ -14,6 +14,11 @@ $( document ).ready(function () {
         }
     });
 
+    // Template stuff
+
+    Handlebars.registerHelper('count', function (arr) {
+        return arr.length;
+    });
 
     var template_source = document.getElementById("content_template").innerHTML;
     var template = Handlebars.compile(template_source);
