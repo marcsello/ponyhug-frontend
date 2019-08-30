@@ -32,7 +32,7 @@ $( document ).ready(function () {
 					if (data.jwt) {
 						localStorage.setItem("ponyhug_jwt",data.jwt);
 						localStorage.setItem("ponyhug_name",playername);
-						$(location).attr("href", "herd.html"); // redirect user to herd.html
+						$(location).attr("href", "/"); // redirect user to herd.html
 
 					} else {
 						$("#errortext").html("Could not get JWT token");

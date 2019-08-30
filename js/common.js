@@ -8,7 +8,7 @@ function checkRegistration(this_is_registration_page, next) {
             if (next) {
                 var nextpage = next;
             } else {
-                var nextpage = "herd.html";
+                var nextpage = "/";
             }
 
 
