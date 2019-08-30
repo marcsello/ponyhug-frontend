@@ -16,30 +16,32 @@
 	checkRegistration(false);
 </script>
 
-</head>
-<body>
-<h1>Your herd!</h1>
-
+<script id="content_template" type="text/x-handlebars-template">
 <div class="brief">
 	<div>Congrats! You hugged</div>
-	<div class="cnt">5</div>
+	<div class="cnt">{{count this}}</div>
 	<div>ponies</div>
 </div>
 <h2>Your ponies</h2>
 
-<a href="ponyinfo.html" class="card">
+{{#each this}}
+<a href="ponyinfo.html?ponyid={{pony.id}}" class="card">
 	<div>
-		<img src="https://derpicdn.net/img/view/2012/8/27/84264.gif"/>
-		The derpest derp horse derped the derps ever derping The derpest derp horse derped the derps ever derping The derpest derp horse derped the derps ever derping The derpest derp horse derped the derps ever derping The derpest derp horse derped the derps ever derping The derpest derp horse derped the derps ever derping The derpest derp horse derped the derps ever derping The derpest derp horse derped the derps ever derping The derpest derp horse derped the derps ever derping The derpest derp horse derped the derps ever derping
+		<img src="{{pony.image}}"/>
+		{{pony.title}}
 	</div>
 </a>
+{{/each}}
+</script>
 
-<a href="ponyinfo.html" class="card">
-	<div>
-		<img src="https://derpicdn.net/img/view/2012/8/27/84264.gif"/>
-		The derpest derp horse derped the derps ever derping
-	</div>
-</a>
+
+</head>
+<body>
+<h1>Your herd!</h1>
+
+
+<div id="content_container">
+</div>
 
 <div class="navigators">
 	<button onclick="window.location.href='hug.html'">Hug a pony!</button>
@@ -61,5 +63,6 @@
 	</div>
 </div>
 
+<script src="js/herd.js"></script>
 </body>
 </html>

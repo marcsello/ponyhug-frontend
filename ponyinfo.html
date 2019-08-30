@@ -31,9 +31,13 @@
 
 <table>
 <tbody>
-<tr><th>First hugger</th><td>{{ first_hugger }}</td></tr>
-<tr><th>Total hugs</th><td>2</td></tr>
-<tr><th>Hugged by</th><td>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br>Marcsello<br>Niggapapa<br>Asdfighter<br>Yoloman<br></td></tr>
+<tr><th>First hugger</th><td>{{first_hugger}}</td></tr>
+<tr><th>Total hugs</th><td>{{count hugs}}</td></tr>
+<tr><th>Hugged by</th><td>
+{{#each hugs}}
+    {{this}}<br>
+{{/each}}
+</td></tr>
 </tbody>
 </table>
 </script>
