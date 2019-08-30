@@ -31,7 +31,7 @@ $( document ).ready(function () {
 				201 : function(data) {
 					if (data.jwt) {
 						localStorage.setItem("ponyhug_jwt",data.jwt);
-						localStorage.setItem("ponyhug_name",playername);
+						localStorage.setItem("ponyhug_name",data.playername);
 						$(location).attr("href", "/"); // redirect user to herd.html
 
 					} else {
