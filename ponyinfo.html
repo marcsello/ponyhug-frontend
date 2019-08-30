@@ -22,18 +22,18 @@
 <script id="content_template" type="text/x-handlebars-template">
 <div class="ponycard">
 	<img src="{{ image }}" />
-	<div class="src"><a href="{{ source }}">source</a></div>
+	<div class="src"><a href="{{ source }}">forrás</a></div>
 	<div class="title">{{ title }}</div>
 </div>
 
 
-<h2>Statistics</h2>
+<h2>Póni statisztikák</h2>
 
 <table>
 <tbody>
-<tr><th>First hugger</th><td>{{first_hugger}}</td></tr>
-<tr><th>Total hugs</th><td>{{count hugs}}</td></tr>
-<tr><th>Hugged by</th><td>
+<tr><th>Először ölelte</th><td>{{first_hugger}}</td></tr>
+<tr><th>Összes ölelések</th><td>{{count hugs}}</td></tr>
+<tr><th>Eddig megölelték</th><td>
 {{#each hugs}}
     {{this}}<br>
 {{/each}}
@@ -45,20 +45,20 @@
 </head>
 <body>
 
-<h1>Pony info</h1>
+<h1>Pónika</h1>
 
 <div id="content_container">
 </div>
 
 <div class="navigators">
-	<button onclick="window.location.href='herd.html'">Your stats</button>
-	<button onclick="window.location.href='hug.html'">Hug another pony!</button>
+	<button onclick="window.location.href='herd.html'">Eddig megölelt pónik</button>
+	<button onclick="window.location.href='hug.html'">Ölelj meg még egy pónit!</button>
 </div>
 
 
 <div class="footer">
 	<div>
-	Get <a href="/">HELP</a>!
+	<a href="/">Információk</a>
 	</div>
 
 	<div>

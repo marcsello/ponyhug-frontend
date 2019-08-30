@@ -25,7 +25,7 @@ $( document ).ready(function () {
 			dataType: "json",
 			statusCode: {
 				403 : function() {
-					$("#errortext").html("Name already taken");
+					$("#errortext").html("Ez a név már használatban van!");
 					$('#register_form').prop("disabled", false);
 				},
 				201 : function(data) {
@@ -35,7 +35,7 @@ $( document ).ready(function () {
 						$(location).attr("href", "/"); // redirect user to herd.html
 
 					} else {
-						$("#errortext").html("Could not get JWT token");
+						$("#errortext").html("Could not get JWT token"); // faszom ez csak maradhat angol...
 						$('#register_form').prop("disabled", false);
 					}
 				}

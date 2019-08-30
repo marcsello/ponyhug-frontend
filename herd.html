@@ -18,11 +18,11 @@
 
 <script id="content_template" type="text/x-handlebars-template">
 <div class="brief">
-	<div>Congrats! You hugged</div>
+	<div>Eddigi öleléseid száma:</div>
 	<div class="cnt">{{count this}}</div>
-	<div>ponies</div>
+	<div>póni</div>
 </div>
-<h2>Your ponies</h2>
+<h2>{{subtitle this 'Megölelgetett pónik'}}</h2>
 
 {{#each this}}
 <a href="ponyinfo.html?ponyid={{pony.id}}" class="card">
@@ -37,20 +37,20 @@
 
 </head>
 <body>
-<h1>Your herd!</h1>
+<h1>Ménes</h1>
 
 
 <div id="content_container">
 </div>
 
 <div class="navigators">
-	<button onclick="window.location.href='hug.html'">Hug a pony!</button>
+	<button onclick="window.location.href='hug.html'">Ölelj meg egy pónit!</button>
 </div>
 
 
 <div class="footer">
 	<div>
-	Get <a href="/">HELP</a>!
+	<a href="/">Információk</a>
 	</div>
 
 	<div>

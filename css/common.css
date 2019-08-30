@@ -44,3 +44,8 @@ div.navigators > button {
 div.padded {
 	padding: 1em 0;
 }
+
+p.signature {
+	text-align: right;
+	font-style: italic;
+}
