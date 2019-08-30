@@ -20,11 +20,11 @@ $( document ).ready(function () {
 		    dataType: "json",
 		    statusCode: {
 			    404 : function() { // unknown key
-                    $("#errortext").html("This key is invalid");
+                    $("#errortext").html("Ilyen kulcs nem létezik");
                     $('#hug_form').prop("disabled", false);
 			    },
 			    409 : function() { // conflict
-                    $("#errortext").html("This pony have already been hugged");
+                    $("#errortext").html("Ezt a pónit már megölelted egyszer");
                     $('#hug_form').prop("disabled", false);
 			    },
                 201 : function(data) { // successful hug!
