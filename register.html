@@ -7,45 +7,49 @@
 <link rel="stylesheet" href="css/watercss_light.min.css">
 <link rel="stylesheet" href="css/common.css">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script>
+	checkRegistration(true);
+</script>
 
 </head>
 <body>
 <h1>Register</h1>
 
-<div>
-Caution your memes are being memed. Be careful while meming. 
+<div class="padded">
+Caution your memes are being memed. Be careful while meming.
 Always be aware of your surroundings
 </div>
 
+<div id="errortext">&nbsp;</div>
+
 <div class="form_container">
-<form action="#">
-	<input type="text" placeholder="Player name"></input>
+<form action="#" id="register_form" autocomplete="off">
+	<input name="playername" type="text" placeholder="Player name" autocomplete="off"></input>
 	<div style="text-align:right">
 		<button>Start playing!</button>
 	</div>
 </form>
 </div>
 
-<div>
+<div class="padded">
 Lorem  laoreet. Donec eget ultrices massa, vitae scelerisque dolor. In interdum mi massa, ut maximus nunc convallis sed. Donec  tristique mollis at ac urna. Nullam aliquam velit massa.
 </div>
 
 <div class="footer">
-	<div>
-	Get <a href="#">HELP</a>!
-	</div>
-	
+
 	<div>
 	Created by Marcsello 2019
 	</div>
-	
+
 	<div>
 	<a href="https://hunbrony.hu">Hunbrony.hu</a>&nbsp;
 	<a href="https://marcsello.com">Marcsello.com</a>
 	</div>
 </div>
 
-
+<script src="js/register.js"></script>
 </body>
 </html>

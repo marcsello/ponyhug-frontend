@@ -35,3 +35,12 @@ div.navigators > button {
 	margin-left: auto; 
 	margin-right: auto;
 }
+
+#errortext {
+	color: red;
+	text-align: center;
+}
+
+div.padded {
+	padding: 1em 0;
+}
