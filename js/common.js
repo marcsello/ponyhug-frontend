@@ -40,3 +40,14 @@ function getFormData(jquery_selector) {
 							}, {});
 
 }
+
+
+$( document ).ready(function () {
+
+    var playername = localStorage.getItem("ponyhug_name"); 
+    
+    if (playername) {
+	$("#playername").html(playername)
+    }
+
+});

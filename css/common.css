@@ -27,7 +27,7 @@ h1 {
 }
 
 div.navigators {
-	padding: 2em;
+	padding: 2em 2em 1em 2em;
 }
 
 div.navigators > button {
@@ -48,4 +48,10 @@ div.padded {
 p.signature {
 	text-align: right;
 	font-style: italic;
+}
+
+#playername {
+	text-align: center;
+	font-size: 0.9em;
+	padding-top: 0.75em;
 }
