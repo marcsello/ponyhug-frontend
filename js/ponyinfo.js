@@ -36,6 +36,19 @@ $( document ).ready(function () {
     Handlebars.registerHelper('count', function (arr) {
         return arr.length;
     });
+    
+    Handlebars.registerHelper('src_link', function(url) {
+        
+        if ((!url) || (url == '') || (url === null)) { // I don't trust JS
+            return "";
+        }
+    
+        url = Handlebars.escapeExpression(url);        
+      
+        return new Handlebars.SafeString(
+          "<a href='" + url + "'>forrás</a>"
+        );
+    });
 
     var template_source = document.getElementById("content_template").innerHTML;
     var template = Handlebars.compile(template_source);
